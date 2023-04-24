@@ -13,8 +13,8 @@ class Report extends React.Component {
           <div className="bg-cover bg-report mycover  h-[100vh] w-1/2"></div>
           <div className="flex justify-center signitem items-center  w-1/2">
             <div className="w-full px-6 py-8 md:px-8 ">
-              <div className="flex justify-center items-center w-full text-3xl leading-[72px]  font-bold text-blue-600">
-                Crime Report App
+              <div className="flex justify-center items-center w-full text-3xl leading-[72px]  font-bold text-[#377D97]">
+                Crime Report systerm
               </div>
               <div className=" grid grid-cols-2 ">
                 <div className="mt-4 m-2">
@@ -125,7 +125,7 @@ class Report extends React.Component {
                 />
               </div>
               <div className="mt-6 flex justify-center">
-                <button className="w-1/2 h-[] align-middle px-6 py-3 rounded-[24px] font-bold text-xl  tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#4053F5]  hover:bg-blue-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
+                <button className="w-1/2 h-[] align-middle px-6 py-3 rounded-[24px] font-bold text-xl  tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#377D97]  hover:bg-blue-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
                   report the crime
                 </button>
               </div>

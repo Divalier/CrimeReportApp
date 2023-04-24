@@ -7,6 +7,8 @@ import Hero from "./components/Hero.jsx";
 import Cards from "./components/Cards.jsx";
 import Report from "./components/Report.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar2 from "./components/navBar2";
+import Home2 from "./components/home2";
 
 class App extends React.Component {
   render() {
@@ -18,7 +20,7 @@ class App extends React.Component {
               index
               element={
                 <>
-                  <Navbar /> <Hero /> <Cards /> <Footer />
+                  <Navbar2 /> <Home2 /> <Footer />
                 </>
               }
             />

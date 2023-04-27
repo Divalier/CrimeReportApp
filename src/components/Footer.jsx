@@ -3,7 +3,7 @@ import {FaDribbbleSquare, FaFacebookSquare, FaGithubSquare, FaInstagram, FaTwitt
 function Footer() {
   return (
     <div className='w-full flex justify-center   bg-[#377D97]'> 
-    <div className="flex w-full px-44 py-8 flex-col justify-center items-center">
+    <div className="flex w-full px-10 py-8 flex-col justify-center items-center">
         <div>
         <h1 className=' text-3xl py-2 font-bold text-white'> Quick link </h1> 
         </div> 

@@ -7,7 +7,7 @@ function Navbar2() {
     setNav(!nav);
   };
   return (
-    <div className="flex justify-between py-4 px-3 items-center shadow-lg">
+    <div className="flex justify-between py-4 px-10 items-center shadow-lg">
       <div className="">
         <button className="font-bold text-xl">Home</button>
       </div>

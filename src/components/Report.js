@@ -1,140 +1,251 @@
-import React from "react";
+import React, { useState } from "react";
 
-class Report extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
+function Report() {
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const handledate = (e) => {
+    setDate(e.target.value);
+  };
+  const handletime = (e) => {
+    setTime(e.target.value);
+  };
 
-  render() {
-    return (
-      <div className="contSigncont flex justify-center ">
-        <div className="flex     w-[100vw]    h-[100vh] contSign bg-[#D9D9D9] rounded-lg contSigncontain shadow-lg dark:bg-gray-800 ">
-          <div className="bg-cover bg-report mycover  h-[100vh] w-1/2"></div>
-          <div className="flex justify-center signitem items-center  w-1/2">
-            <div className="w-full px-6 py-8 md:px-8 ">
-              <div className="flex justify-center items-center w-full text-3xl leading-[72px]  font-bold text-[#377D97]">
-                Crime Report systerm
-              </div>
-              <div className=" grid grid-cols-2 ">
-                <div className="mt-4 m-2">
-                  <label
-                    className="block mb-2 text-sm font-medium text-gray-800 dark:text-gray-200"
-                    for="LoggingEmailAddress"
-                  >
-                    First name
-                  </label>
-                  <input
-                    id="LoggingEmailAddress"
-                    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                    type="text"
-                    pattern="[0-9]-[0-9]"
-                    maxlength="2"
-                  />
-                </div>
-                <div className="mt-4 m-2">
-                  <label
-                    className="block mb-2 text-sm font-medium text-gray-800 dark:text-gray-200"
-                    for="LoggingEmailAddress"
-                  >
-                    Last name
-                  </label>
-                  <input
-                    id="LoggingEmailAddress"
-                    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                    type="text"
-                    pattern="[0-9]-[0-9]"
-                    maxlength="2"
-                  />
-                </div>
-                <div className="mt-4 m-2">
-                  <label
-                    className="block mb-2 text-sm font-medium text-gray-800 dark:text-gray-200"
-                    for="LoggingEmailAddress"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="LoggingEmailAddress"
-                    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                    type="email"
-                    pattern="[0-9]-[0-9]"
-                    maxlength="2"
-                  />
-                </div>
-                <div className="mt-4 m-2">
-                  <label
-                    className="block mb-2 text-sm font-medium text-gray-800 dark:text-gray-200"
-                    for="LoggingEmailAddress"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    id="LoggingEmailAddress"
-                    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                    type="email"
-                    pattern="[0-9]-[0-9]"
-                    maxlength="2"
-                  />
-                </div>
-                <div className="mt-4 m-2">
-                  <label
-                    className="block mb-2 text-sm font-medium text-gray-800 dark:text-gray-200"
-                    for="LoggingEmailAddress"
-                  >
-                    Date of the crime
-                  </label>
-                  <input
-                    id="LoggingEmailAddress"
-                    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                    type="date"
-                    pattern="[0-9]-[0-9]"
-                    maxlength="2"
-                  />
-                </div>
-                <div className="mt-4 m-2">
-                  <label
-                    className="block mb-2 text-sm font-medium text-gray-800 dark:text-gray-200"
-                    for="LoggingEmailAddress"
-                  >
-                    Type of the crime
-                  </label>
-                  <input
-                    id="LoggingEmailAddress"
-                    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                    type="email"
-                    pattern="[0-9]-[0-9]"
-                    maxlength="2"
-                  />
-                </div>
-              </div>
-              <div className="mt-4">
-                <label
-                  className="block mb-2 text-sm font-medium text-gray-800 dark:text-gray-200"
-                  for="LoggingEmailAddress"
+  return (
+    <div className="flex  ">
+      <div className=" flex justify-end w-full h-[calc(100vh-96px)] bg-report bg-center bg-cover p-6">
+        <div className="flex flex-col justify-between h-full w-1/2 px-4">
+          <div className=" flex Justify-center flex-col p-5 w-full h-[85%] rounded bg-[#00729BE5]">
+            <div className="  flex justify-center items-center w-full text-white text-xl font-bold ">
+              {" "}
+              Report a Crime
+            </div>
+            <div className="flex flex-row justify-start items-center p-1 bg-white w-full mt-4">
+              <div>
+                <svg
+                  width="16"
+                  height="20"
+                  viewBox="0 0 16 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  Description
-                </label>
-                <textarea
-                  id="LoggingEmailAddress"
-                  className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                  type="email"
-                  pattern="[0-9]-[0-9]"
-                  maxlength="2"
-                  height="161 px"
+                  <path
+                    d="M8 10C8.55 10 9.021 9.804 9.413 9.412C9.805 9.02 10.0007 8.54933 10 8C10 7.45 9.804 6.979 9.412 6.587C9.02 6.195 8.54933 5.99933 8 6C7.45 6 6.979 6.196 6.587 6.588C6.195 6.98 5.99933 7.45067 6 8C6 8.55 6.196 9.021 6.588 9.413C6.98 9.805 7.45067 10.0007 8 10ZM8 20C5.31667 17.7167 3.31267 15.596 1.988 13.638C0.663333 11.68 0.000666667 9.86733 0 8.2C0 5.7 0.804333 3.70833 2.413 2.225C4.02167 0.741667 5.884 0 8 0C10.1167 0 11.9793 0.741667 13.588 2.225C15.1967 3.70833 16.0007 5.7 16 8.2C16 9.86667 15.3373 11.6793 14.012 13.638C12.6867 15.5967 10.6827 17.7173 8 20Z"
+                    fill="#666666"
+                  />
+                </svg>
+              </div>
+              <div className="flex flex-grow w-full px-2">
+                {" "}
+                <input
+                  className="flex w-full text-gray-700 focus:outline-none"
+                  type="text"
+                  placeholder=" tell us the location of your crime"
                 />
               </div>
-              <div className="mt-6 flex justify-center">
-                <button className="w-1/2 h-[] align-middle px-6 py-3 rounded-[24px] font-bold text-xl  tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#377D97]  hover:bg-blue-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
-                  report the crime
-                </button>
+            </div>
+
+            {/* rows */}
+            <div className="flex flex-row w-full h-full">
+              {/* row1 */}
+              <div className="flex flex-col w-1/2 h-full border mr-4">
+                {/* start of date input */}
+                <div className="flex flex-row justify-start items-center p-1 bg-white w-full mt-4">
+                  <div className=" w-[21] h-[22]">
+                    <div className="relative ">
+                      <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.7501 1.5C5.7501 1.30109 5.67108 1.11032 5.53043 0.96967C5.38978 0.829018 5.19901 0.75 5.0001 0.75C4.80119 0.75 4.61042 0.829018 4.46977 0.96967C4.32912 1.11032 4.2501 1.30109 4.2501 1.5V3.08C2.8101 3.195 1.8661 3.477 1.1721 4.172C0.477102 4.866 0.195102 5.811 0.0791016 7.25H19.9211C19.8051 5.81 19.5231 4.866 18.8281 4.172C18.1341 3.477 17.1891 3.195 15.7501 3.079V1.5C15.7501 1.30109 15.6711 1.11032 15.5304 0.96967C15.3898 0.829018 15.199 0.75 15.0001 0.75C14.8012 0.75 14.6104 0.829018 14.4698 0.96967C14.3291 1.11032 14.2501 1.30109 14.2501 1.5V3.013C13.5851 3 12.8391 3 12.0001 3H8.0001C7.1611 3 6.4151 3 5.7501 3.013V1.5Z"
+                          fill="#666666"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M0 11C0 10.161 1.11759e-08 9.415 0.013 8.75H19.987C20 9.415 20 10.161 20 11V13C20 16.771 20 18.657 18.828 19.828C17.657 21 15.771 21 12 21H8C4.229 21 2.343 21 1.172 19.828C-1.19209e-07 18.657 0 16.771 0 13V11ZM15 13C15.2652 13 15.5196 12.8946 15.7071 12.7071C15.8946 12.5196 16 12.2652 16 12C16 11.7348 15.8946 11.4804 15.7071 11.2929C15.5196 11.1054 15.2652 11 15 11C14.7348 11 14.4804 11.1054 14.2929 11.2929C14.1054 11.4804 14 11.7348 14 12C14 12.2652 14.1054 12.5196 14.2929 12.7071C14.4804 12.8946 14.7348 13 15 13ZM15 17C15.2652 17 15.5196 16.8946 15.7071 16.7071C15.8946 16.5196 16 16.2652 16 16C16 15.7348 15.8946 15.4804 15.7071 15.2929C15.5196 15.1054 15.2652 15 15 15C14.7348 15 14.4804 15.1054 14.2929 15.2929C14.1054 15.4804 14 15.7348 14 16C14 16.2652 14.1054 16.5196 14.2929 16.7071C14.4804 16.8946 14.7348 17 15 17ZM11 12C11 12.2652 10.8946 12.5196 10.7071 12.7071C10.5196 12.8946 10.2652 13 10 13C9.73478 13 9.48043 12.8946 9.29289 12.7071C9.10536 12.5196 9 12.2652 9 12C9 11.7348 9.10536 11.4804 9.29289 11.2929C9.48043 11.1054 9.73478 11 10 11C10.2652 11 10.5196 11.1054 10.7071 11.2929C10.8946 11.4804 11 11.7348 11 12ZM11 16C11 16.2652 10.8946 16.5196 10.7071 16.7071C10.5196 16.8946 10.2652 17 10 17C9.73478 17 9.48043 16.8946 9.29289 16.7071C9.10536 16.5196 9 16.2652 9 16C9 15.7348 9.10536 15.4804 9.29289 15.2929C9.48043 15.1054 9.73478 15 10 15C10.2652 15 10.5196 15.1054 10.7071 15.2929C10.8946 15.4804 11 15.7348 11 16ZM5 13C5.26522 13 5.51957 12.8946 5.70711 12.7071C5.89464 12.5196 6 12.2652 6 12C6 11.7348 5.89464 11.4804 5.70711 11.2929C5.51957 11.1054 5.26522 11 5 11C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12C4 12.2652 4.10536 12.5196 4.29289 12.7071C4.48043 12.8946 4.73478 13 5 13ZM5 17C5.26522 17 5.51957 16.8946 5.70711 16.7071C5.89464 16.5196 6 16.2652 6 16C6 15.7348 5.89464 15.4804 5.70711 15.2929C5.51957 15.1054 5.26522 15 5 15C4.73478 15 4.48043 15.1054 4.29289 15.2929C4.10536 15.4804 4 15.7348 4 16C4 16.2652 4.10536 16.5196 4.29289 16.7071C4.48043 16.8946 4.73478 17 5 17Z"
+                          fill="#666666"
+                        />
+                      </svg>
+                    </div>
+                    <div className=" absolute opacity-0 -mt-[21px]">
+                      <input
+                        className="flex absolute w-[21px] h-[22px] text-inherit focus:outline-none"
+                        type="date"
+                        color="inherit"
+                        placeholder=" date of crime"
+                        value={date}
+                        onChange={handledate}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-grow w-full px-2">
+                    {/* input */}
+                    <input
+                      className="flex w-full text-gray-700 focus:outline-none"
+                      type="text"
+                      placeholder=" year-moth-day"
+                      value={date}
+                    />
+                  </div>
+                </div>
+                {/* end of date input */}
+                {/* start of description input */}
+                <div className="h-full">
+                  <div className="flex flex-row justify-start items-center p-1 bg-white w-full  mt-4">
+                    <div>
+                      <svg
+                        width="20"
+                        height="14"
+                        viewBox="0 0 20 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.999869 12H12.9999C13.2547 12.0003 13.4999 12.0979 13.6852 12.2728C13.8706 12.4478 13.9821 12.687 13.997 12.9414C14.012 13.1958 13.9292 13.4464 13.7656 13.6418C13.602 13.8373 13.37 13.9629 13.1169 13.993L12.9999 14H0.999869C0.744989 13.9997 0.499837 13.9021 0.3145 13.7272C0.129164 13.5522 0.0176337 13.313 0.0026966 13.0586C-0.0122405 12.8042 0.0705433 12.5536 0.234134 12.3582C0.397724 12.1627 0.629773 12.0371 0.882869 12.007L0.999869 12ZM0.999869 8H18.9999C19.2547 8.00028 19.4999 8.09788 19.6852 8.27285C19.8706 8.44782 19.9821 8.68695 19.997 8.94139C20.012 9.19584 19.9292 9.44638 19.7656 9.64183C19.602 9.83729 19.37 9.9629 19.1169 9.993L18.9999 10H0.999869C0.744989 9.99972 0.499837 9.90212 0.3145 9.72715C0.129164 9.55218 0.0176337 9.31305 0.0026966 9.05861C-0.0122405 8.80416 0.0705433 8.55362 0.234134 8.35817C0.397724 8.16271 0.629773 8.0371 0.882869 8.007L0.999869 8ZM0.999869 4H18.9999C19.2547 4.00028 19.4999 4.09788 19.6852 4.27285C19.8706 4.44782 19.9821 4.68695 19.997 4.94139C20.012 5.19584 19.9292 5.44638 19.7656 5.64183C19.602 5.83729 19.37 5.9629 19.1169 5.993L18.9999 6H0.999869C0.744989 5.99972 0.499837 5.90212 0.3145 5.72715C0.129164 5.55218 0.0176337 5.31305 0.0026966 5.05861C-0.0122405 4.80416 0.0705433 4.55362 0.234134 4.35817C0.397724 4.16271 0.629773 4.0371 0.882869 4.007L0.999869 4ZM0.999869 0H18.9999C19.2547 0.000282707 19.4999 0.0978789 19.6852 0.272848C19.8706 0.447817 19.9821 0.686953 19.997 0.941395C20.012 1.19584 19.9292 1.44638 19.7656 1.64183C19.602 1.83729 19.37 1.9629 19.1169 1.993L18.9999 2H0.999869C0.744989 1.99972 0.499837 1.90212 0.3145 1.72715C0.129164 1.55218 0.0176337 1.31305 0.0026966 1.05861C-0.0122405 0.804163 0.0705433 0.553621 0.234134 0.358168C0.397724 0.162715 0.629773 0.0371036 0.882869 0.00699997L0.999869 0Z"
+                          fill="#666666"
+                        />
+                      </svg>
+                    </div>
+                    <div className="flex flex-grow w-full text-gray-700 px-2">
+                      Description
+                    </div>
+                  </div>
+                  <div className="flex h-full w-full">
+                    <textarea
+                      className="flex w-full h-[220px] text-gray-700 resize-none focus:outline-none"
+                      type="text"
+                      resize="none"
+                      placeholder=" tell us the location of your crime"
+                    />
+                  </div>
+                </div>
+                {/* end of description input */}
+              </div>
+              {/* row 2 */}
+              <div className="flex flex-col h-full w-1/2">
+                {/* start oftime input */}
+                <div className="flex flex-row justify-start items-center p-1 bg-white w-full mt-4">
+                  <div className=" w-[21] h-[22]">
+                    <div className="relative ">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM14 14C13.9075 14.0927 13.7976 14.1663 13.6766 14.2164C13.5557 14.2666 13.426 14.2924 13.295 14.2924C13.164 14.2924 13.0343 14.2666 12.9134 14.2164C12.7924 14.1663 12.6825 14.0927 12.59 14L9.3 10.71C9.20551 10.6174 9.13034 10.5069 9.07885 10.3851C9.02735 10.2632 9.00055 10.1323 9 10V6C9 5.45 9.45 5 10 5C10.55 5 11 5.45 11 6V9.59L14 12.59C14.39 12.98 14.39 13.61 14 14Z"
+                          fill="#666666"
+                        />
+                      </svg>
+                    </div>
+                    <div className=" absolute opacity-0 -mt-[21px]">
+                      <input
+                        className="flex absolute w-[21px] h-[22px] text-inherit focus:outline-none"
+                        type="time"
+                        color="inherit"
+                        placeholder=" hh:mm"
+                        value={time}
+                        onChange={handletime}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-grow w-full px-2">
+                    {/* input */}
+                    <input
+                      className="flex w-full text-gray-700 focus:outline-none"
+                      type="text"
+                      placeholder=" year-moth-day"
+                      value={time}
+                    />
+                  </div>
+                </div>
+                {/* end of time input */}
+                {/* start of selection */}
+                <div className="flex flex-row justify-start items-center p-1 bg-white w-full mt-4">
+                  <div>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H16C16.5304 18 17.0391 17.7893 17.4142 17.4142C17.7893 17.0391 18 16.5304 18 16V2C18 1.46957 17.7893 0.960859 17.4142 0.585786C17.0391 0.210714 16.5304 0 16 0ZM3 3H8V8H3V3ZM7.5 16C6.83696 16 6.20107 15.7366 5.73223 15.2678C5.26339 14.7989 5 14.163 5 13.5C5 12.837 5.26339 12.2011 5.73223 11.7322C6.20107 11.2634 6.83696 11 7.5 11C8.16304 11 8.79893 11.2634 9.26777 11.7322C9.73661 12.2011 10 12.837 10 13.5C10 14.163 9.73661 14.7989 9.26777 15.2678C8.79893 15.7366 8.16304 16 7.5 16ZM10.5 10L13.5 5L16.5 10H10.5Z"
+                        fill="#666666"
+                      />
+                    </svg>
+                  </div>
+                  <div className="flex flex-grow w-full px-2">
+                    {" "}
+                    <select
+                      className="flex w-full text-gray-700 focus:outline-none"
+                      name="type of crime"
+                    >
+                      <option> violence</option>
+                      <option> violence</option>
+                      <option> violence</option>
+                      <option> violence</option>
+                    </select>
+                  </div>
+                </div>
+                {/* end of selection */}
+                <div>
+                  <div className="flex flex-row justify-start items-center p-1 bg-white w-full mt-4">
+                    <div>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_731_66)">
+                          <path
+                            d="M21.1073 5.25H6.65625C5.0625 5.25 3.75 6.53953 3.75 8.12484V19.6252C3.75 21.2105 5.0625 22.5 6.65625 22.5H21.0938C22.6875 22.5 24 21.2728 24 19.6875V8.12484C24 6.53953 22.7025 5.25 21.1073 5.25ZM17.4909 8.12531C17.9168 8.1279 18.3324 8.25657 18.6853 8.49507C19.0382 8.73357 19.3125 9.07123 19.4737 9.46546C19.6349 9.85968 19.6757 10.2928 19.591 10.7102C19.5063 11.1276 19.3 11.5106 18.9979 11.8108C18.6958 12.1111 18.3116 12.3151 17.8937 12.3973C17.4758 12.4794 17.0429 12.436 16.6496 12.2724C16.2564 12.1088 15.9204 11.8324 15.6841 11.4781C15.4477 11.1238 15.3216 10.7075 15.3216 10.2816C15.3238 9.70806 15.5535 9.15887 15.9602 8.75453C16.3669 8.35018 16.9174 8.12372 17.4909 8.12484V8.12531ZM6.63703 21.0628C5.84016 21.0628 5.23734 20.4183 5.23734 19.6256V16.5867L9.47766 12.7997C9.89219 12.435 10.4296 12.2411 10.9814 12.2571C11.5333 12.273 12.0586 12.4975 12.4514 12.8855L15.3877 15.7969L10.0908 21.0623L6.63703 21.0628ZM22.5 19.6252C22.4999 19.8141 22.4626 20.0011 22.3903 20.1756C22.3179 20.3501 22.2118 20.5086 22.0781 20.6421C21.9444 20.7756 21.7857 20.8814 21.6111 20.9535C21.4365 21.0256 21.2494 21.0626 21.0605 21.0623H12.1406L17.6287 15.6094C18.0182 15.2808 18.511 15.1 19.0205 15.0986C19.53 15.0973 20.0238 15.2754 20.415 15.6019L22.5 17.3714V19.6252Z"
+                            fill="#666666"
+                          />
+                          <path
+                            d="M18 1.5H3C2.20435 1.5 1.44129 1.81607 0.87868 2.37868C0.316071 2.94129 0 3.70435 0 4.5L0 16.5C0.00054868 17.1651 0.221737 17.8113 0.628907 18.3372C1.03608 18.8631 1.60622 19.2391 2.25 19.4062V7.125C2.25 6.22989 2.60558 5.37145 3.23851 4.73851C3.87145 4.10558 4.72989 3.75 5.625 3.75H20.9062C20.7391 3.10622 20.3631 2.53608 19.8372 2.12891C19.3113 1.72174 18.6651 1.50055 18 1.5Z"
+                            fill="#666666"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_731_66">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div className="flex flex-grow w-full text-gray-700 px-2">
+                      <input
+                        className="flex w-full multiple text-gray-700 focus:outline-none"
+                        type="file"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-grow w-full bg-white h-full">
+                    zzzzz
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <div className="flex justify-center rounded w-full h-[10%] bg-[#377D97]">
+            {" "}
+            hh
+          </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Report;

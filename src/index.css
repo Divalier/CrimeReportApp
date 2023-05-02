@@ -8,68 +8,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.contSigncont {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-}
-img {
-  object-fit: cover;
-  filter: contrast(10%);
-  filter: brightness(0%);
-  filter: saturate(90%);
-  height: 530px;
-  width: auto;
-}
-.vmaintext {
-  display: flex;
-  justify-content: center;
-  color: red;
-  algin-self: center;
+
+.grad {
+  background: linear-gradient(
+    180deg,
+    #dfdfdf 0%,
+    rgba(223, 223, 223, 0.721482) 65.13%,
+    rgba(223, 223, 223, 0) 100%
+  );
 }
 @media (max-width: 1023px) {
-  .contSigncont {
-    background-image: url("/src/image/police.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    height: 100%;
-    margin-top: -6rem;
-  }
-  .mycover {
-    display: none;
-  }
-  .signitem {
-    width: 100%;
-  }
-  .contSign {
-    margin: 40px;
-    //background: rgba(76, 175, 80, 0.9);
-    --tw-bg-opacity: 0.9;
-    font-color: red;
-    font-weight: 1000;
-    font-size: 2em;
-  }
-
-  .cad {
-    height: 100 vmax;
-    width: 100%;
-  }
-
-  .popup_inner {
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 16%;
-  }
-  .Navbar,
-  .slide,
-  .mslide {
-    display: none;
-  }
-  .main {
-    width: 96%;
-    margin-left: 2%;
-  }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 425px) {

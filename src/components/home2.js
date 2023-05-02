@@ -5,6 +5,7 @@ import objective1 from "../image/textmonia (4).png";
 import objective2 from "../image/textmonia (6).png";
 import objective3 from "../image/textmonia (2).png";
 import objective4 from "../image/textmonia (3).png";
+import landpcover from "../image/Group.png";
 import { motion, useScroll } from "framer-motion";
 
 function Home2() {
@@ -12,52 +13,54 @@ function Home2() {
   console.log(scrollYProgress);
 
   return (
-    <div className="flex  flex-col justify-center items-center py-6 ">
-      <div className=" h-[600px]">
-        <div className="flex  justify-center bg-cover bg-mountCurv  h-[500px] w-[1000px] ">
-          <div className="flex flex-col w-[350px] h-[300px]  mt-[300px]">
-            <div className="flex flex-col justify-between w-[350px] pt-6 h-[200px]  bg-cover bg-letus">
+    <div className="flex  flex-col justify-center items-center ">
+      <div className=" bg-[#12384E] boder flex justify-center flex-col h-[87vh]  w-full">
+        <div className="flex  justify-center bg-cover mt-2  ">
+          <img
+            className=" h-[60vh] w-[auto] "
+            alt="court symbol png"
+            src={landpcover}
+          />
+        </div>
+        <div className=" flex justify-center -mt-[25vh] relative">
+          <div className="flex flex-col w-[350px] h-[200px] ">
+            <div className="flex  flex-col justify-center w-[350px] pt-6 h-[190px]  bg-cover bg-letus">
               <div className="flex justify-center">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="80"
-                  height="72"
-                  viewBox="0 0 80 72"
+                  width="73"
+                  height="69"
+                  viewBox="0 0 73 69"
                   fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M79.5929 43.132C79.2975 42.7253 78.8692 42.4812 78.4114 42.4324L77.1855 42.3023C76.5799 36.5426 74.8667 30.8969 72.1934 25.9183L73.9805 25.0234C74.4088 24.8119 74.7337 24.4214 74.8962 23.9496C75.0587 23.4778 75.0439 22.9734 74.8667 22.5015C74.8519 22.4039 74.8224 22.3063 74.7928 22.225C74.7042 22.0134 74.5417 21.8507 74.3497 21.7694C74.202 21.6392 74.0396 21.5253 73.8771 21.4603C73.434 21.2813 72.9614 21.2976 72.5331 21.5091L70.229 22.648C68.6192 20.2075 66.773 17.9785 64.7496 16.0098C62.992 14.3014 61.0867 12.7883 59.0781 11.4867L60.7766 8.8672C61.0572 8.44418 61.1606 7.9398 61.0867 7.41916C61.0129 6.91479 60.7618 6.45922 60.3778 6.16636C59.9938 5.85722 59.5211 5.74335 59.0633 5.8247C58.6054 5.90605 58.1919 6.18263 57.926 6.60566L55.9322 9.66444C51.6047 7.45171 46.8194 6.1501 42.0193 5.87351V1.93615C42.0193 0.862319 41.2365 0 40.2617 0C39.2869 0 38.5041 0.862319 38.5041 1.93615V5.85722C33.6006 6.085 28.7119 7.4029 24.2959 9.66444L22.6269 6.47549C22.3906 6.01993 22.0066 5.69453 21.5487 5.56437C21.0909 5.43421 20.6182 5.49928 20.2194 5.7596C19.8059 6.01993 19.5253 6.44295 19.3924 6.93105C19.2742 7.43543 19.3333 7.95608 19.5696 8.39538L21.1795 11.4541C19.2742 12.6907 17.4576 14.1062 15.8034 15.6844C13.6766 17.7019 11.7565 19.9797 10.1023 22.4853L7.88692 21.0698C7.48814 20.8095 7.0155 20.7444 6.55765 20.8745C6.3361 20.9396 6.12934 21.0698 5.92257 21.2487C5.7158 21.3138 5.55333 21.4765 5.43517 21.6718C5.34655 21.8345 5.30224 22.0297 5.31701 22.225C5.2284 22.5504 5.2284 22.9083 5.31701 23.25C5.43517 23.7543 5.73056 24.1774 6.1441 24.4214L8.16754 25.7068C5.49426 30.6041 3.75144 36.1684 3.10159 41.8304H1.75755C0.782765 41.8304 0 42.6927 0 43.7666C0 44.8404 0.782765 45.7027 1.75755 45.7027H2.82096C2.6585 51.1857 3.48559 56.5549 5.27271 61.68L5.62718 62.7049C5.67149 62.8351 5.76011 62.9327 5.87826 62.9815C5.99642 63.0303 6.12935 63.0141 6.23274 62.949L7.10413 62.4284C8.10846 61.8426 8.74354 61.4684 9.17186 61.2081L9.26047 61.1593C10.0876 60.6549 10.0876 60.6549 10.959 60.2482L11.727 59.8902C11.9485 59.7926 12.0519 59.516 11.9633 59.272L11.6827 58.4096C8.43338 48.6639 9.55586 37.649 14.6809 28.8143L17.0588 30.36C17.4723 30.6203 17.9893 30.4576 18.2403 30.0021C18.3585 29.7906 18.388 29.5302 18.3437 29.2862C18.2994 29.0259 18.1517 28.8143 17.945 28.6842L15.6557 27.1873C17.044 25.0722 18.6391 23.1524 20.3819 21.5091C25.6399 16.5304 32.36 13.6994 39.3608 13.5042V16.2864C39.3608 16.7907 39.7595 17.1975 40.2469 17.1975C40.7343 17.1975 41.1331 16.7907 41.1331 16.2864V13.5204C48.1634 13.7808 54.8835 16.6931 60.0971 21.7694C61.6479 23.2662 63.0658 24.9746 64.3065 26.8294L61.8104 28.1961C61.3821 28.4239 61.2196 29.0096 61.4412 29.4814C61.6627 29.9532 62.1797 30.1648 62.5932 29.9207L65.3108 28.4401C70.5983 37.3236 71.8242 48.4686 68.5601 58.3283L68.2942 59.1093C68.2204 59.3371 68.309 59.5811 68.501 59.695L69.2395 60.1343C70.0518 60.6875 70.8937 61.1756 71.706 61.6474L71.9128 61.2244L71.7946 61.6962C72.2229 61.9403 72.6513 62.2006 73.0648 62.4446L73.951 62.9815C74.01 63.0141 74.0839 63.0466 74.1577 63.0466C74.202 63.0466 74.2611 63.0304 74.3054 63.0141C74.4236 62.9653 74.527 62.8677 74.5713 62.7375L74.9405 61.6962C76.6833 56.7176 77.5252 51.4949 77.4218 46.1583L78.2489 46.2396C79.1646 46.2396 79.9031 45.4912 79.9917 44.4987C80.036 44.0269 79.9031 43.5388 79.5929 43.132ZM67.6887 27.1711L69.2986 26.2925C72.3263 31.5315 74.1873 37.5514 74.6599 43.7503L74.719 44.7102C74.9848 49.6563 74.4088 54.5211 72.9762 59.1743L72.9319 59.1418C72.4149 58.8489 71.898 58.5398 71.3811 58.2307C74.4384 47.9154 73.05 36.3799 67.6887 27.1711ZM66.6991 25.5441C65.2665 23.3476 63.6271 21.3626 61.84 19.6217C56.1389 14.0899 48.7985 10.9172 41.1331 10.6569V8.72077C46.2138 8.88348 51.265 10.2827 55.7549 12.7883L56.5229 13.2113C58.8417 14.578 61.0276 16.2538 63.0067 18.1737C64.9711 20.0936 66.7582 22.2738 68.309 24.6655L66.6991 25.5441ZM11.8599 24.7468C13.4993 22.2087 15.4046 19.8983 17.5166 17.8808C19.3628 16.1237 21.4158 14.578 23.6017 13.2764L24.3549 12.8371C28.963 10.2502 34.1471 8.83466 39.3608 8.72077V10.6569C31.7249 10.8522 24.3992 13.9272 18.6687 19.3614C16.7191 21.2162 14.9467 23.3639 13.3959 25.7556L11.8599 24.7468ZM8.80262 58.1656C8.61062 58.2795 8.37431 58.4096 8.00508 58.6374L7.20751 59.1093C5.7601 54.3584 5.1841 49.4123 5.49426 44.3686L5.55333 43.4249C6.07026 37.3887 7.88691 31.5152 10.8556 26.3576L12.3916 27.3663C7.13368 36.5101 5.78964 47.948 8.80262 58.1656Z"
-                    fill="#252525"
-                  />
-                  <path
-                    d="M45.0176 50.5187C45.5641 49.6564 45.889 48.5988 45.889 47.4599C45.889 44.4825 43.7031 42.0745 41.0003 42.0745C40.3948 42.0745 39.8335 42.2047 39.3018 42.4325L23.6904 22.7294L37.3522 44.0107C36.4218 44.9869 36.1116 45.9468 36.1116 47.4762C36.1116 50.4536 38.2975 52.8616 41.0003 52.8616C41.6502 52.8616 42.2705 52.7151 42.8465 52.4548C42.8465 52.4548 45.1505 56.5712 45.121 56.62C45.2835 56.8152 45.4459 57.0105 45.5936 57.222C45.6527 57.3033 45.7118 57.3847 45.7709 57.4498C48.0749 60.0042 50.054 57.9867 48.8134 55.1557C48.6509 54.9442 45.0176 50.5187 45.0176 50.5187ZM40.9708 50.8604C39.2427 50.8604 37.8544 49.3147 37.8544 47.4274C37.8544 45.5238 39.2575 43.9944 40.9708 43.9944C42.6988 43.9944 44.0871 45.54 44.0871 47.4274C44.0871 49.331 42.684 50.8604 40.9708 50.8604Z"
-                    fill="#252525"
-                  />
-                  <path
-                    d="M40.3951 59.6624L17.9897 62.6235V68.5458L40.3951 71.4907L62.8005 68.5458V62.6235L40.3951 59.6624Z"
-                    fill="#252525"
+                    d="M65.9528 14.2508C59.3604 7.62255 49.5075 6.26106 41.5178 10.0589L38.0782 6.61935C37.7467 6.2872 37.353 6.02369 36.9196 5.8439C36.4862 5.66411 36.0215 5.57156 35.5523 5.57156C35.0831 5.57156 34.6184 5.66411 34.185 5.8439C33.7516 6.02369 33.3579 6.2872 33.0264 6.61935L32.7398 6.9418C32.2382 3.46644 29.2644 0.779297 25.6815 0.779297C21.7404 0.779297 18.5158 4.00386 18.5158 7.945C18.5158 8.26746 18.5158 8.58992 18.6233 8.87655C16.4378 10.1305 14.933 12.4236 14.933 15.1107C14.933 16.7588 15.5062 18.2278 16.4378 19.446C15.9782 19.7623 15.6015 20.1847 15.3395 20.6773C15.0776 21.17 14.9382 21.7185 14.933 22.2764V27.1133C6.58493 30.0512 0.601562 38.0051 0.601562 47.3564C0.601562 59.2156 10.2394 68.8535 22.0987 68.8535C33.9579 68.8535 43.5958 59.2156 43.5958 47.3564C43.596 42.9139 42.2175 38.5807 39.6505 34.9549C37.0835 31.3291 33.4546 28.5892 29.2644 27.1133V22.2764C29.2592 21.7185 29.1197 21.17 28.8578 20.6773C28.5959 20.1847 28.2192 19.7623 27.7596 19.446C28.6911 18.2278 29.2644 16.7588 29.2644 15.1107C29.2644 14.7883 29.2644 14.4658 29.1569 14.1792C29.8018 13.8209 30.3393 13.3193 30.805 12.8893C34.1371 14.6808 36.4301 18.192 36.4301 22.2764V22.563C36.8959 22.8138 37.3258 23.1721 37.7916 23.4588C38.4723 21.954 39.4039 20.485 40.622 19.3026C43.3139 16.6186 46.9602 15.1113 50.7615 15.1113C54.5629 15.1113 58.2092 16.6186 60.901 19.3026C63.5851 21.9945 65.0923 25.6408 65.0923 29.4421C65.0923 33.2435 63.5851 36.8898 60.901 39.5816C58.0347 42.4479 54.3444 43.7735 50.5107 43.7735C50.7615 44.9201 50.7615 46.1382 50.7615 47.3564C50.7615 48.5746 50.654 49.7569 50.5107 50.9392C56.1358 50.9392 61.6892 48.897 65.9528 44.6334C67.9543 42.6421 69.5426 40.275 70.6263 37.668C71.7101 35.0609 72.268 32.2654 72.268 29.4421C72.268 26.6188 71.7101 23.8233 70.6263 21.2163C69.5426 18.6093 67.9543 16.2421 65.9528 14.2508ZM25.6815 4.36215C27.6521 4.36215 29.2644 5.97443 29.2644 7.945C29.2644 9.12735 28.6553 10.1305 27.7596 10.7755C26.4698 9.05569 24.4275 7.945 22.0987 7.945C22.0987 5.97443 23.711 4.36215 25.6815 4.36215ZM20.0206 12.2803C21.3105 14 23.3527 15.1107 25.6815 15.1107C25.6815 17.0813 24.0693 18.6936 22.0987 18.6936C20.1281 18.6936 18.5158 17.0813 18.5158 15.1107C18.5158 13.9284 19.1249 12.9252 20.0206 12.2803ZM36.4301 47.3564C36.4301 55.2745 30.0168 61.6878 22.0987 61.6878C14.1806 61.6878 7.76727 55.2745 7.76727 47.3564C7.76727 39.4383 14.1806 33.025 22.0987 33.025C30.0168 33.025 36.4301 39.4383 36.4301 47.3564Z"
+                    fill="white"
                   />
                 </svg>
               </div>
-              <div className="flex justify-center text-xl font-bold">
-                FAUCIBUS.
+              <div className="flex justify-center text-xl text-white font-bold">
+                C.R.S
               </div>
-              <div className="flex justify-center">
-                <button className=" text-xl font-bold text-orange-600">
-                  Let us know your situation
-                </button>
-              </div>
-            </div>
-            <div className="fex justify-center pt-[40px]">
-              <button className=" flex  justify-center text-md items-center rounded-full bg-[#377D97] text-white font-bold h-[60px] w-[350px]  ">
-                Join our community
-              </button>
             </div>
           </div>
         </div>
+        <div className="flex justify-center  text-white">
+          <div className="w-[450px] text-center">
+            Our website offers a simple and easy-to-use reporting system that
+            allows users to report crimes quickly and efficiently.
+          </div>
+        </div>
+        <div className="flex justify-center mt-2">
+          <NavLink to="/signIn">
+            <button className=" flex  justify-center text-md items-center rounded-full font-bold bg-white text-[#12384E] h-[50px] w-[350px]  ">
+              Join our community
+            </button>
+          </NavLink>
+        </div>
       </div>
       {/* rounded cards */}
-      <motion.div className=" w-full   flex justify-between px-10 py-10 flex-row">
+      <motion.div className=" w-full grad   flex justify-between px-10 py-10 flex-row">
         {/* start cards */}
         <div className="w-[300px] h-[420px] flex  justify-between flex-col items-center  ">
           <div className="py-2">
@@ -163,12 +166,28 @@ function Home2() {
       </motion.div>
       {/* testimonia */}
 
-      <div className=" flex  flex-col items-center w-full px-[120px] text-[#377D97] justify-center">
+      <div className=" flex bg-[#FFA336] flex-col items-center w-full px-30 text-[#377D97] justify-center">
         <div className="flex justify-center pb-8 text-[2em] text-[#377D97]  font-bold">
           Testimonial
         </div>
-        <div className=" flex  px-10 py-3 w-fulljustify-between">
-          <div className=" flex  rounded-full w-[415px]  h-[415px] justify-center p-2 object-cover shadow-lg shadow-gray-700">
+        <div className=" flex  px-10 py-3 w-full justify-between items-center">
+          <div className=" flex  justify-center">
+            <button className="flex  justify-center items-center bg-white w-[80px] h-[80px] rounded-full shadow">
+              <svg
+                width="41"
+                height="26"
+                viewBox="0 0 41 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.9062 25.5522C19.6006 26.0036 20.3034 26.0299 21.0145 25.6313C21.7256 25.2327 22.0819 24.6161 22.0832 23.7813V15.0834H38.7499C39.3402 15.0834 39.8353 14.8834 40.2353 14.4834C40.6353 14.0834 40.8346 13.589 40.8332 13.0001C40.8332 12.4098 40.6332 11.9147 40.2332 11.5147C39.8332 11.1147 39.3388 10.9154 38.7499 10.9168H22.0832V2.21884C22.0832 1.3855 21.727 0.768835 21.0145 0.368835C20.302 -0.0311645 19.5992 -0.00477543 18.9062 0.448002L1.927 11.2293C1.26728 11.6459 0.937412 12.2362 0.937412 13.0001C0.937412 13.764 1.26728 14.3543 1.927 14.7709L18.9062 25.5522Z"
+                  fill="#377D97"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className=" flex  rounded-full  bg-white w-[430px] items-center h-[430px] justify-center p-2 object-cover shadow-lg shadow-gray-700">
             <img
               className=" flex w-[400px]  h-[400px] justify-center object-fill"
               alt="textmonial"
@@ -177,15 +196,36 @@ function Home2() {
           </div>
           <div className=" flex flex-col p-4 pl-20 justify-center">
             <div className=" text-xl">LINDA R. NOWAK</div>
-            <div>
+            <div className="w-[400px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut
               imperdiet nisi. Interdum
             </div>
           </div>
+          <div className=" flex  justify-center">
+            <button className="flex  justify-center items-center bg-white w-[80px] h-[80px] rounded-full shadow">
+              <svg
+                width="41"
+                height="26"
+                viewBox="0 0 41 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.0936 25.5522C21.3991 26.0036 20.6964 26.0299 19.9853 25.6313C19.2741 25.2327 18.9179 24.6161 18.9165 23.7813V15.0834H2.24984C1.65957 15.0834 1.16443 14.8834 0.764428 14.4834C0.364428 14.0834 0.165122 13.589 0.166511 13.0001C0.166511 12.4098 0.366511 11.9147 0.766511 11.5147C1.16651 11.1147 1.66096 10.9154 2.24984 10.9168H18.9165V2.21884C18.9165 1.3855 19.2728 0.768835 19.9853 0.368835C20.6978 -0.0311645 21.4005 -0.00477543 22.0936 0.448002L39.0728 11.2293C39.7325 11.6459 40.0623 12.2362 40.0623 13.0001C40.0623 13.764 39.7325 14.3543 39.0728 14.7709L22.0936 25.5522Z"
+                  fill="#377D97"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div className="flex flex-row justify-center py-7">
+          <div className="bg-black rounded w-[45px] h-[12px] mr-8"></div>
+          <div className="bg-black rounded w-[45px] h-[12px]"></div>
+          <div className="bg-black rounded w-[45px] h-[12px] ml-8"></div>
         </div>
       </div>
       {/* our objctive */}
-      <div className=" flex  flex-col items-center w-full px-[10px] text-[#377D97] justify-center">
+      <div className=" flex bg-[#12384E] flex-col items-center w-full px-[10px] text-[#377D97] justify-center">
         <div className="flex justify-center pb-8 text-[2em] text-[#377D97]  font-bold">
           Our objective
         </div>
@@ -224,60 +264,6 @@ function Home2() {
               alt="textmonial"
               src={objective4}
             />
-          </div>
-        </div>
-      </div>
-
-      <div className=" justify-center bg-[cover] bg-letfil h-[500px] w-full hidden ">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-[500px] w-full border"
-          fill="none"
-        >
-          <rect width="1512" height="500" fill="url(#paint0_linear_442_173)" />
-          <defs>
-            <linearGradient
-              id="paint0_linear_442_173"
-              x1="0"
-              y1="250"
-              x2="1512"
-              y2="250"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="white" />
-              <stop offset="0.075256" stop-color="white" stop-opacity="0.66" />
-              <stop offset="0.471946" stop-color="white" stop-opacity="0" />
-              <stop offset="0.933281" stop-color="white" stop-opacity="0.73" />
-              <stop offset="1" stop-color="white" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <div className="flex flex-col pt-8 justify-center">
-        <div className="flex justify-center p-8 text-[3em] text-[#377D97] f font-bold">
-          {" "}
-          About us
-        </div>
-        <div className=" flex-row justify-between py-6 px-10 w-full border hidden">
-          <div className="flex flex-col justify-around  h-[360px] w-[385px] bg-cover p-5 bg-about">
-            <div className="text-xl font-bold  text-white">
-              {" "}
-              Our Objectives{" "}
-            </div>
-            <div className="text-xl text-white">
-              {" "}
-              Loren ipsu dolor sit amet, consectetur adipicing elit. Nullam ut
-              imperdiet nisi. interdum{" "}
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-around px-8 h-[360px] w-[385px] bg-cover p-5 bg-about">
-            <div className="text-xl font-bold text-white"> Our Objectives </div>
-            <div className="text-xl  text-white">
-              {" "}
-              Loren ipsu dolor sit amet, consectetur adipicing elit. Nullam ut
-              imperdiet nisi. interdum{" "}
-            </div>
           </div>
         </div>
       </div>
